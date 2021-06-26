@@ -32,12 +32,12 @@
 ```sql
 CREATE TABLE `clothes`
 {
-	`id` int(11) NOT NULL AUTO_INCREMENT,
-    `brand_id` int(11) NOT NULL
-    `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-    `sex` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-    `size` tinyInt(4) NOT NULL,
-    PRIMARY KEY (`id`)
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `brand_id` int(11) NOT NULL
+  `type` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `sex` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `size` tinyInt(4) NOT NULL,
+  PRIMARY KEY (`id`)
 }
 DEFAULT CHARSET = utf-8
 COLLATE = utf8_unicode_ci
@@ -45,8 +45,8 @@ COLLATE = utf8_unicode_ci
 CREATE TABLE `brands`
 {
 	`id` int(11) NOT NULL AUTO_INCREMENT,
-    `name` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
-    PRIMARY KEY (`id`)
+  `name` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  PRIMARY KEY (`id`)
 }
 DEFAULT CHARSET = utf-8
 COLLATE = utf8_unicode_ci
@@ -55,7 +55,7 @@ COLLATE = utf8_unicode_ci
 ```sql
 alter table clothes
 	add constraint clothes_brands_fk
-    	foreign key (brand_id) references brands(id)
+    foreign key (brand_id) references brands(id)
 ```
 
 ```sql
